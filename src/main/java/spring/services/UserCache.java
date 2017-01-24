@@ -1,4 +1,4 @@
-package spring;
+package spring.services;
 
 import spring.model.User;
 

@@ -1,4 +1,4 @@
-package spring;
+package spring.services;
 
 /**
  * Created by Стрела on 17.01.2017.

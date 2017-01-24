@@ -2,8 +2,7 @@ package spring;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-
-import javax.jws.soap.SOAPBinding;
+import spring.services.LoginService;
 
 
 /**

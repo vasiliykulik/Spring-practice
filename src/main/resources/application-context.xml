@@ -2,21 +2,21 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="loginService" class="spring.LoginServiceImpl">
+    <bean id="loginService" class="spring.services.LoginServiceImpl">
         <property name="userCache" ref="userCache"/>
         <property name="authenticator" ref="auth"/>
     </bean>
-    <bean id="userService" class="spring.UserService">
+    <bean id="userService" class="spring.services.UserService">
 
     </bean>
     <bean id="cache" class="java.util.HashMap" scope="prototype"/>
     <!--вот здесь мы можем ConcurrentHashMap или TreeMap, В Spring сила Брат-->
-    <bean id="userCache" class="spring.UserCacheImpl">
+    <bean id="userCache" class="spring.services.UserCacheImpl">
         <!--bean - userCache, ижектим через setter берем  -->
         <property name="service" ref="userService"/>
         <property name="cache" ref="cache"/>
     </bean>
-    <bean id="auth" class="spring.AuthenticatorImpl">
+    <bean id="auth" class="spring.services.SimpleAuthenticator">
 
     </bean>
 
